@@ -1,0 +1,148 @@
+
+<!-- saved from url=(0433)https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/411511435634782.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2TAWW44RCEE6YREN%2F20210526%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210526T122149Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27D8.html&X-Amz-Signature=17e5d5b7fea7f2bcd4fbd35063dac7dc2c842ca01eed5e831e6e2b8ccd5c7ebe -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    
+    <style>
+      .myHeading {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>This is the title of the page</h1>
+      <h2>This is the subtitle of the page</h2>
+    </header>
+
+    <main>
+      <hr>
+
+      <ul id="firstList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <ul id="secondList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <a href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school">This link goes to Strive School</a>
+
+      <div>
+        <p>This text is just for the exercise</p>
+      </div>
+
+      <div>
+        <input type="text" id="input-field" placeholder="input field for the exercise">
+      </div>
+    </main>
+
+    <footer>
+      <p>And this text is just for the exercise too!</p>
+    </footer>
+    <script>
+      /* EXERCISE 1
+      Write a function for changing the title of the document in something else.
+      */
+
+      const changeTitle = function (newTitle) {
+        let h1 = document.getElementsByTagName("h1")[0]
+        h1.innerText = "This is my first page."
+      }
+      changeTitle()
+
+      /* EXERCISE 2
+      Write a function for changing the class of the title of the page in "myHeading".
+      */
+
+      const addClassToTitle = function () {
+        let h1 = document.getElementsByTagName("h1")[0]
+        h1.classList.add("myHeading")
+      }
+      addClassToTitle()
+
+      /* EXERCISE 3
+      Write a function for changing the text of only the p which are children of a div.
+      */
+
+      const changePcontent = function () {
+        let newP = document.querySelector("div p")
+        newP.innerText = "This exercises is too cool and fun."
+      }
+      changePcontent()
+
+      /* EXERCISE 4
+      Write a function for changing the destination of every link to https://www.google.com
+      */
+
+      const changeUrls = function () {
+        let newUrls =document.querySelector("main a")
+        newUrls.innerHTML = "https://www.google.com"
+      }
+      changeUrls()
+
+      /* EXERCISE 5
+       Write a function for adding a new item in the second list.
+       */
+
+      const addToTheSecond = function () {
+        let newItem1 = document.getElementById("secondList")
+        let newItem = document.createElement("li")
+        newItem.innerText = "4th"
+        newItem1.appendChild(newItem)
+      }
+      addToTheSecond()
+
+      /* EXERCISE 6
+      Write a function for adding a second paragraph to the div.
+      */
+
+      const addParagraph = function (content) {
+        let newParagraph = document.createElement("p")
+        newParagraph.innerText = "You are smart enough."
+        document.querySelector("div").appendChild(newParagraph)
+      }
+      addParagraph()
+
+      /* EXERCISE 7
+      Write a function for making the first UL disappear.
+      */
+
+      const firstUlDisappear = function () {
+        let ulToDisappear = document.querySelector("#firstList")
+        ulToDisappear.remove()
+      }
+      firstUlDisappear()
+
+      /* EXERCISE 8
+      Write a function for making the background of every UL green.
+      */
+
+      const paintItGreen = function () {
+        let changingBackground = document.getElementById("secondList")
+        changingBackground.style.backgroundColor= "green"
+        
+      }
+      paintItGreen()
+
+      /* EXERCISE 9
+      Make the heading of the page change color every time the user clicks on it.
+      */
+
+      const makeItClickable = function () {
+        let heading = document.getElementsByTagName('h1') 
+        heading[0].addEventListener('click', function () {
+        heading[0].style.color = '#01bB78'
+    })
+  }
+  makeItClickable()
+      
+
+    </script>
+
+
+</body>
+</html>
